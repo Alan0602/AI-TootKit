@@ -1,0 +1,285 @@
+/* ===== Reset Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background-color: rgba(40, 39, 39, 0.5);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    color: #f79149;
+    transition: transform 0.3s ease;
+}
+
+.logo span:hover {
+    transform: scale(1.2);
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(215, 180, 154);
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f79149;
+}
+
+/* ===== Sections ===== */
+.home,
+.about,
+.services,
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* ===== Home Section ===== */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 12rem 2rem;
+}
+
+.container2 span:first-child {
+    font-size: 5rem;
+    font-weight: bolder;
+    background-image: url('../assests/home.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 0 0.2rem #c2916f);
+    color: transparent;
+}
+
+.container2 span:nth-child(2) {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-image: url('../assests/home.jpeg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 0 0.1rem #e0e3e4);
+    color: transparent;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.image-container {
+    flex: 1;
+    filter: drop-shadow(0 0 0.5rem #e0e3e4);
+    animation: slideRight 1s ease-in-out forwards;
+}
+
+.text-container {
+    flex: 2;
+    width: 200px;
+    height: 400px;
+    background-image: url('../assests/home.jpg');
+    padding: 2rem;
+    color:white;
+    box-shadow: inset;
+    border: 1px solid white;
+    animation: slideLeft 1s ease-in-out forwards;
+}
+
+.text-container h1 {
+    font-size: 1.5rem;
+}
+
+.text-container p {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.main-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(177, 172, 172, 0.1);
+    background-color: #fff;
+}
+
+
+
+.image-container2 {
+    flex: 1;
+    animation: slideRight 1s ease-in-out forwards;
+    padding: 20px;
+}
+
+.image-container2 img {
+    max-width: 100%;
+}
+
+/* ===== Services Section ===== */
+.services h2 {
+    margin-bottom: 30px;
+}
+
+/* ===== Contact Section ===== */
+.contact h2,
+.contact p {
+    margin-bottom: 30px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #ff6c00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #ff9900;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(177, 172, 172, 0.1);
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+/* Typography */
+h2, h3 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+span {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    display: block;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* List */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: "\2022";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
